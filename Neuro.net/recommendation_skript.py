@@ -145,6 +145,9 @@ def _recognizer(data: str, r, next_logic_step: str):
         else:
             continue
 
+    else:
+        raise InvalidCallStateError(nn.log("Call ended"))
+
 
 def hello_main():
     nn.log('unit', 'hello_main')
